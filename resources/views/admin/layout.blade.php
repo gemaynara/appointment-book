@@ -9,14 +9,14 @@
       <meta property="og:type" content="website" />
       <meta property="og:url" content="{{url('/')}}" />
       <meta property="og:title" content='{{__("message.System Name")}}' />
-{{--      <meta property="og:image" content="{{Session::get('favicon')}}" />--}}
+      <meta property="og:image" content="{{Session::get('favicon')}}" />
       <meta property="og:image:width" content="250px" />
       <meta property="og:image:height" content="250px" />
       <meta property="og:site_name" content='{{__("message.System Name")}}' />
       <meta property="og:description" content='{{__("message.meta_description")}}' />
       <meta property="og:keyword" content='{{__("message.Meta Keyword")}}' />
       <link href="{{asset('admin_design/layouts/vertical/assets/libs/dropzone/min/dropzone.min.css')}}" rel="stylesheet" type="text/css" />
-{{--      <link rel="shortcut icon" href="{{Session::get('favicon')}}" />--}}
+      <link rel="shortcut icon" href="{{Session::get('favicon')}}" />
       <link href="{{asset('admin_design/layouts/vertical/assets/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
       <link href="{{asset('admin_design/layouts/vertical/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
       <link rel="stylesheet" href="{{asset('admin_design/layouts/vertical/assets/libs/twitter-bootstrap-wizard/prettify.css')}}" />
