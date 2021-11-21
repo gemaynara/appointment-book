@@ -26,7 +26,7 @@
                <div class="card">
                   <div class="card-body">
                      <form action="{{url('admin/updatedoctor')}}" class="needs-validation" method="post" enctype="multipart/form-data">
-                        {{csrf_field()}} 
+                        {{csrf_field()}}
                         <input type="hidden" name="id" id="doctor_id" value="{{$id}}">
                         <div class="row">
                            <div class="col-lg-6">
@@ -36,18 +36,18 @@
                                        <div class="upload-btn-wrapper">
                                           <button  type="button" class="btn imgcatlog">
                                           <input type="hidden" name="real_basic_img" id="real_basic_img" value="<?= isset($data->image)?$data->image:""?>"/>
-                                          <?php 
+                                          <?php
                                              if(isset($data->image)){
-                                                 $path=asset('public/upload/doctors')."/".$data->image;
+                                                 $path=asset('upload/doctors/'. $data->image);
                                              }
                                              else{
-                                                 $path=asset('public/upload/profile/profile.png');
+                                                 $path=asset('upload/profile/profile.png');
                                              }
                                              ?>
                                           <img src="{{$path}}" alt="..." class="img-thumbnail imgsize"  id="basic_img" >
                                           </button>
                                           <input type="hidden" name="basic_img" id="basic_img1"/>
-                                          <input type="file" name="upload_image" id="upload_image" />
+                                          <input type="file" name="upload_image" id="upload_image" accept="image/*" />
                                        </div>
                                     </div>
                                  </div>
@@ -147,8 +147,8 @@
                               <button type="button" onclick="disablebtn()" class="btn btn-primary">{{__('message.Submit')}}</button>
                            @else
                                <button  class="btn btn-primary" type="submit" value="Submit">{{__("message.Submit")}}</button>
-                           @endif 
-                             
+                           @endif
+
                            </div>
                         </div>
                      </form>

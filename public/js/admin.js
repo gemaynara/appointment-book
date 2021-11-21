@@ -5,12 +5,20 @@ $(document).ready(function () {
         reverse: true,
         onKeyPress: function (val, e, field, options) {
             if (val > 100) {
-                alert('The value cannot exceed 100.');
+                alert('O valor não pode ser supeior a 100%');
                 $('.number-percent').val("");
             }
         }
     });
     $(".number").mask("#####.99", {reverse: true});
+    $('.cnpj').mask("##.###.###/####-##");
+    $('.phone').mask("(##)#####-####");
+    $('.agency').mask("####-#");
+    $('.account').mask("00000#############-#", {reverse: true});
+    $('.select-services').select2({
+        placeholder: "Selecione um ou mais serviços",
+        allowClear: true
+    });
 
     $('.type').on('change', function () {
         var type = (this.value);
@@ -137,6 +145,34 @@ $(document).ready(function () {
             {data: 'image', name: 'image'},
             {data: 'name', name: 'name'},
             // {data: 'active', name: 'active'},
+            {data: 'action', name: 'action'}
+        ],
+        columnDefs: [
+            {
+                targets: 1,
+                render: function (data) {
+                    return '<img src="' + data + '" height="50">';
+                }
+            }
+        ]
+
+    });
+});
+
+
+$(document).ready(function () {
+    $('#clinicstable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: $("#siteurl").val() + '/clinicstable',
+        columns: [
+            {data: 'id', name: 'id'},
+            {data: 'image', name: 'image'},
+            {data: 'name', name: 'name'},
+            {data: 'cnpj', name: 'cnpj'},
+            {data: 'email', name: 'email'},
+            {data: 'phone', name: 'phone'},
+            {data: 'services', name: 'services'},
             {data: 'action', name: 'action'}
         ],
         columnDefs: [

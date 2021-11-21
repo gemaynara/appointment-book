@@ -6,13 +6,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{{__('message.System Name')}}"/>
 <meta property="og:title" content="{{__('message.System Name')}}"/>
-<meta property="og:image" content="{{asset('public/image_web/').'/'.$setting->favicon}}"/>
+<meta property="og:image" content="{{asset('image_web/').$setting->favicon}}"/>
 <meta property="og:image:width" content="250px"/>
 <meta property="og:image:height" content="250px"/>
 <meta property="og:site_name" content="{{__('message.System Name')}}"/>
 <meta property="og:description" content="{{__('message.meta_description')}}"/>
 <meta property="og:keyword" content="{{__('message.Meta Keyword')}}"/>
-<link rel="shortcut icon" href="{{asset('public/image_web/').'/'.$setting->favicon}}">
+<link rel="shortcut icon" href="{{asset('/image_web/').$setting->favicon}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @stop
 @section('content')
@@ -43,7 +43,7 @@
                     <div class="form-inner clearfix">
                         <form action="{{url('searchdoctor')}}" method="get">
                             <div class="form-group clearfix">
-                              
+
                                 <input type="text" name="term" value="{{$term}}" id="term" placeholder="{{__('message.Ex. Name')}}" required="">
                                 @if(!empty($type))
                                  <input type="hidden" name="type" value="{{$type}}">
@@ -51,7 +51,7 @@
                                 <button type="submit"><i class="icon-Arrow-Right"></i></button>
                             </div>
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                                           @endforeach
                                         </select>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="menu-box">
                                     <button class="list-view"><i class="icon-List"></i></button>
                                     <button class="grid-view on"><i class="icon-Grid"></i></button>
@@ -97,7 +97,7 @@
                                                 @else
                                                   <img src="{{asset('public/upload/doctors/default.png')}}" alt="" style="height: inherit;">
                                                 @endif
-                                                
+
                                                 </figure>
                                             <div class="content-box">
                                                 <div class="like-box">
@@ -132,12 +132,12 @@
                                                                                   echo '<li><i class="icon-Star"></i></li>';
                                                                               }
                                                                           }
-                                                                          
+
                                                                               $remaing = 5 - $i;
                                                                               for ($j = 0; $j < $remaing; $j++) {
                                                                                   echo '<li class="light"><i class="icon-Star"></i></li>';
                                                                               }
-                                                                         
+
                                                                       }else{
                                                                            for ($j = 0; $j <5; $j++) {
                                                                                   echo '<li class="light"><i class="icon-Star"></i></li>';
@@ -154,7 +154,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach    
+                                @endforeach
                                   @if(isset($type)&&$type!=""&&isset($term)&&$term!="")
                                      {{$doctorlist->appends(['term' => $term,'type'=>$type])->links()}}
                                   @elseif(isset($type)&&$type!=""&&empty($term))
@@ -163,10 +163,10 @@
                                      {{$doctorlist->appends(['term' => $term])->links()}}
                                   @else
                                      {{$doctorlist->links()}}
-                                  @endif                            
+                                  @endif
                             </div>
-                          
-                            
+
+
                             <div class="clinic-grid-content">
                                 <div class="row clearfix">
                                     @foreach($doctorlist as $dl)
@@ -197,7 +197,7 @@
                                                             <ul class="rating clearfix">
                                                                 <?php
                                                                       $arr = $dl->avgratting;
-                                                                      
+
                                                                       if (!empty($arr)) {
                                                                           $i = 0;
                                                                           if (isset($arr)) {
@@ -205,12 +205,12 @@
                                                                                   echo '<li><i class="icon-Star"></i></li>';
                                                                               }
                                                                           }
-                                                                          
+
                                                                               $remaing = 5 - $i;
                                                                               for ($j = 0; $j < $remaing; $j++) {
                                                                                   echo '<li class="light"><i class="icon-Star"></i></li>';
                                                                               }
-                                                                         
+
                                                                       }else{
                                                                            for ($j = 0; $j <5; $j++) {
                                                                                   echo '<li class="light"><i class="icon-Star"></i></li>';
@@ -240,15 +240,15 @@
                                      {{$doctorlist->appends(['term' => $term])->links()}}
                                   @else
                                      {{$doctorlist->links()}}
-                                  @endif 
+                                  @endif
                             </div>
                         </div>
-                       
-                        
+
+
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                         <div class="map-inner ml-10">
-                         
+
                             <div id="map" style="height: 400px"></div>
                         </div>
                     </div>
@@ -267,11 +267,11 @@
          }else{
             window.location.href='{{url("searchdoctor")}}'+'?type='+val+"&term="+term;
          }
-         
+
     }
 </script>
    <script>
-     
+
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(-33.863276, 151.207977),
@@ -281,7 +281,7 @@
             var markerBounds = new google.maps.LatLngBounds();
             var markers =<?=json_encode($doctorslistmap);?>;
             Array.prototype.forEach.call(markers, function(markerElem) {
-               
+
               if(markerElem.lat!=null&&markerElem.lon!=null){
                   var id = markerElem.id;
               var name = markerElem.name;
@@ -317,15 +317,15 @@
               });
 
               map.fitBounds(markerBounds);
-              map.panToBounds(markerBounds); 
+              map.panToBounds(markerBounds);
               }
-              
+
             });
-          
+
         }
 
 initMap();
 
          </script>
-    
+
 @stop

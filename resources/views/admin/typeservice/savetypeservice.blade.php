@@ -41,19 +41,20 @@
 
                                             <div class="form-group">
                                                 <label>{{__("message.Description")}}</label>
-                                                <textarea class="form-control" id="description" name="description"
-                                                          placeholder='{{__("message.Enter Description Name")}}'>
-                                                    {{isset($data->description)?($data->description):null}}
-                                                </textarea>
+                                                <textarea id="description" class="form-control" rows="5" name="description"
+                                                          placeholder='{{__("message.Enter Description")}}'
+                                                          required="">{{isset($data->description)?$data->description:''}}</textarea>
+
                                             </div>
 
                                             <div class="form-group">
                                                 <label
                                                     for="verti-nav-phoneno-input">{{__("message.Type Service")}}</label>
                                                 <select class="form-control type" name="type" id="type" required>
-                                                    <option value="" >Select One</option>
+                                                    <option value="">{{__("message.select")}}</option>
                                                     @foreach($types as $key=>$value)
-                                                        <option value="{{$key}}" {{isset($data->type) == $key? 'selected': ''}}>{{$value}}</option>
+                                                        <option
+                                                            value="{{$key}}" {{isset($data->type) == $key? 'selected': ''}}>{{$value}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -62,16 +63,18 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>Price</label>
+                                                <label>{{__("message.Price")}}</label>
                                                 <input type="text" required name="price"
                                                        value="{{isset($data->price)?$data->price:null}}"
+                                                       placeholder='{{__("message.Enter Price")}}'
                                                        class="form-control number">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label >Displacement Rate</label>
+                                                <label>{{__("message.Displacement Rate")}}</label>
                                                 <input type="text" required name="displacement_rate"
+                                                       placeholder='{{__("message.Enter Displacement Rate")}}'
                                                        value="{{isset($data->displacement_rate)?$data->displacement_rate:null}}"
                                                        class="form-control number">
                                             </div>

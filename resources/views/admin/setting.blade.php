@@ -99,20 +99,6 @@
                                           <label class="custom-control-label" for="formrow-customCheck">{{__("message.Is RTL")}}</label>
                                        </div>
                                     </div>
-                                     <div class="row">
-                                         <div class="col-lg-6">
-                                             <div class="form-group">
-                                                 <label>{{__("message.Flat Fee")}} (R$)</label>
-                                                 <input type="text" required name="flat_fee" value="{{isset($data->flat_fee)?$data->flat_fee:''}}" class="form-control number" maxlength="11" >
-                                             </div>
-                                         </div>
-                                         <div class="col-lg-6">
-                                             <div class="form-group">
-                                                 <label >{{__("message.Percent Fee")}} (%) </label>
-                                                 <input type="text" required="" name="percent_fee" value="{{isset($data->percent_fee)?$data->percent_fee:''}}" class="form-control number-percent" >
-                                             </div>
-                                         </div>
-                                     </div>
                                     <div class="mt-4">
                                        <button type="submit" class="btn btn-primary w-md">{{__("message.Submit")}}</button>
                                     </div>
@@ -125,7 +111,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-pancard-input">{{__("message.Main Banner")}}</label>
                                           @if(isset($data->main_banner))
-                                          <img src="{{asset('public/image_web').'/'.$data->main_banner}}" style="width: 150px;height: 150px">
+                                          <img src="{{asset('/image_web').'/'.$data->main_banner}}" style="width: 150px;height: 150px">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="main_banner">
                                           @else
                                           <input type="file" class="form-control" name="main_banner" id="verti-nav-pancard-input" required="">
@@ -134,7 +120,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-vatno-input">{{__("message.Favicon")}}</label>
                                           @if(isset($data->favicon))
-                                          <img src="{{asset('public/image_web').'/'.$data->favicon}}">
+                                          <img src="{{asset('image_web').'/'.$data->favicon}}">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="favicon">
                                           @else
                                           <input type="file" class="form-control" name="favicon" id="verti-nav-pancard-input" required="">
@@ -143,7 +129,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-cstno-input">{{__("message.LOGO")}}</label>
                                           @if(isset($data->logo))
-                                          <img src="{{asset('public/image_web').'/'.$data->logo}}" style="width: 250px;">
+                                          <img src="{{asset('image_web').'/'.$data->logo}}" style="width: 250px;">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="logo">
                                           @else
                                           <input type="file" class="form-control" name="logo" id="verti-nav-pancard-input" required="">
@@ -152,7 +138,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-servicetax-input">{{__("message.App Banner")}}</label>
                                           @if(isset($data->app_banner))
-                                          <img src="{{asset('public/image_web').'/'.$data->app_banner}}" style="width: 250px;">
+                                          <img src="{{asset('image_web').'/'.$data->app_banner}}" style="width: 250px;">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="app_banner">
                                           @else
                                           <input type="file" class="form-control" name="app_banner" id="verti-nav-pancard-input" required="">
@@ -161,7 +147,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-companyuin-input">{{__("message.Appointment Process Icon 1")}}</label>
                                           @if(isset($data->icon1))
-                                          <img src="{{asset('public/image_web').'/'.$data->icon1}}" style="width: 250px;">
+                                          <img src="{{asset('image_web').'/'.$data->icon1}}" style="width: 250px;">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="icon1">
                                           @else
                                           <input type="file" class="form-control" name="icon1" id="verti-nav-pancard-input" required="">
@@ -170,7 +156,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-declaration-input">{{__("message.Appointment Process Icon 2")}}</label>
                                           @if(isset($data->icon2))
-                                          <img src="{{asset('public/image_web').'/'.$data->icon2}}" style="width: 250px;">
+                                          <img src="{{asset('image_web').'/'.$data->icon2}}" style="width: 250px;">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="icon2">
                                           @else
                                           <input type="file" class="form-control" name="icon2" id="verti-nav-pancard-input" required="">
@@ -179,7 +165,7 @@
                                        <div class="form-group">
                                           <label for="verti-nav-declaration-input">{{__("message.Appointment Process Icon 3")}}</label>
                                           @if(isset($data->icon3))
-                                          <img src="{{asset('public/image_web').'/'.$data->icon3}}" style="width: 250px;">
+                                          <img src="{{asset('image_web').'/'.$data->icon3}}" style="width: 250px;">
                                           <input type="file" class="form-control" id="verti-nav-pancard-input"  name="icon3">
                                           @else
                                           <input type="file" class="form-control" name="icon3" id="verti-nav-pancard-input" required="">

@@ -23,7 +23,7 @@ class PlanController extends Controller
                 return $plans->id;
             })
             ->editColumn('image', function ($plans) {
-                return asset("public/upload/plans").'/'.$plans->image;
+                return asset("upload/plans/". $plans->image);
             })
             ->editColumn('name', function ($plans) {
                 return $plans->name;

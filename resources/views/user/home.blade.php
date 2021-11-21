@@ -6,13 +6,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{{__('message.System Name')}}"/>
 <meta property="og:title" content="{{__('message.System Name')}}"/>
-<meta property="og:image" content="{{asset('public/image_web/').'/'.$setting->favicon}}"/>
+<meta property="og:image" content="{{asset('image_web').'/'.$setting->favicon}}"/>
 <meta property="og:image:width" content="250px"/>
 <meta property="og:image:height" content="250px"/>
 <meta property="og:site_name" content="{{__('message.System Name')}}"/>
 <meta property="og:description" content="{{__('message.meta_description')}}"/>
 <meta property="og:keyword" content="{{__('message.Meta Keyword')}}"/>
-<link rel="shortcut icon" href="{{asset('public/image_web/').'/'.$setting->favicon}}">
+<link rel="shortcut icon" href="{{asset('image_web').'/'.$setting->favicon}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @stop
 @section('content')
@@ -69,7 +69,7 @@
                </div>
             </div>
          </div>
-         @endforeach                    
+         @endforeach
       </div>
       <div class="more-btn"><a href="{{url('viewspecialist')}}" class="theme-btn-one">{{__('message.All Category')}}<i class="icon-Arrow-Right"></i></a></div>
    </div>
@@ -113,12 +113,12 @@
                                      echo '<li><i class="icon-Star"></i></li>';
                                  }
                              }
-                             
+
                                  $remaing = 5 - $i;
                                  for ($j = 0; $j < $remaing; $j++) {
                                      echo '<li><i class="icon-Star" style="color: gray;"></i></li>';
                                  }
-                            
+
                            }else{
                               for ($j = 0; $j <5; $j++) {
                                      echo '<li><i class="icon-Star" style="color: gray;"></i></li>';
@@ -213,7 +213,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
                <div class="processing-block-two">
                   <div class="inner-box">
-                     <figure class="icon-box"><img src="{{asset('public/image_web/').'/'.$setting->icon3}}" alt=""></figure>
+                     <figure class="icon-box"><img src="{{asset('public/image_web').'/'.$setting->icon3}}" alt=""></figure>
                      <h3>{{__('message.Get Instant Doctor Appoinment')}}</h3>
                   </div>
                </div>

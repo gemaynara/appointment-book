@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="{{__('message.System Name')}}"/>
 <meta property="og:description" content="{{__('message.meta_description')}}"/>
 <meta property="og:keyword" content="{{__('message.Meta Keyword')}}"/>
-<link rel="shortcut icon" href="{{asset('public/image_web/').'/'.$setting->favicon}}">
+<link rel="shortcut icon" href="{{asset('image_web').'/'.$setting->favicon}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @stop
 @section('content')
@@ -52,19 +52,19 @@
                         <div class="inner">
                             <form action="#" method="post" class="registration-form">
                                 <div class="row clearfix">
-                                    
+
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <label>{{__('message.Email')}}</label>
                                         <input type="email" name="email" placeholder="{{__('message.Enter Email Address')}}" required="">
                                     </div>
-                                   
+
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                         <button type="submit" class="theme-btn-one">{{__('message.Forgot Password')}}<i class="icon-Arrow-Right"></i></button>
                                     </div>
                                 </div>
                             </form>
                             <div class="text"><span>{{__('message.or')}}</span></div>
-                          
+
                              <div class="login-now"><p>{{__('message.Already have an account')}}<a href="{{url('patientlogin')}}">{{__('message.Log In')}}</a></p></div>
                         </div>
                     </div>

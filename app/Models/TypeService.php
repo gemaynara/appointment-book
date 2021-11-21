@@ -10,11 +10,12 @@ class TypeService extends Model
     protected $table = 'type_services';
     protected $primaryKey = 'id';
 
-    public static function listServices(){
+    public static function listServices()
+    {
         return [
-          'exam'=>"Exam",
-          'test'=>"Test",
-          'vaccine'=>"Vaccine",
+            'exam' => "Exame",
+            'test' => "Teste",
+            'vaccine' => "Vacina",
         ];
     }
 }

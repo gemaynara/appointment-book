@@ -20,7 +20,7 @@
 
 
       <link href="{{asset('public/front_pro/assets/css/timePicker.css')}}" rel="stylesheet">
-     
+
       @if($setting->is_rtl=='1')
           <link href="{{asset('public/front_pro/assets/css/rtl.css?v=22222')}}" rel="stylesheet">
       @else
@@ -30,7 +30,7 @@
 
 
        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css">
-       
+
       <link href="{{asset('public/front_pro/assets/css/responsive.css')}}" rel="stylesheet">
       <link href="{{asset('public/front_pro/assets/css/monthly.css')}}" rel="stylesheet">
       <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css"> -->
@@ -43,7 +43,7 @@
                 color:gray;
             }
       </style>
-      
+
    </head>
    <body>
       @include('cookieConsent::index')
@@ -80,7 +80,7 @@
                <div class="auto-container">
                   <div class="outer-box">
                      <div class="logo-box">
-                        <figure class="logo"><a href="{{url('/')}}"><img src="{{asset('public/image_web/').'/'.$setting->logo}}" alt=""></a></figure>
+                        <figure class="logo"><a href="{{url('/')}}"><img src="{{asset('image_web').'/'.$setting->logo}}" alt=""></a></figure>
                      </div>
                      <div class="menu-area">
                         <div class="mobile-nav-toggler">
@@ -104,7 +104,7 @@
                                     <a href="{{url('userdashboard')}}">{{__('message.My Dashboard')}}</a>
                                     @else
                                     <a href="{{url('doctorlogin')}}">{{__('message.My Dashboard')}}</a>
-                                    @endif                                 
+                                    @endif
                                     @endif
                                  </li>
                               </ul>
@@ -119,7 +119,7 @@
                         <a href="{{url('userdashboard')}}" class="theme-btn-one">{{__('message.My Dashboard')}}</a>
                         @else
                         <a href="{{url('doctorlogin')}}" class="theme-btn-one">{{__('message.My Dashboard')}}</a>
-                        @endif                                 
+                        @endif
                         @endif
                      </div>
                   </div>
@@ -130,7 +130,7 @@
                   <div class="outer-box">
                      <div class="logo-box">
                         <figure class="logo"><a href="{{url('/')}}">
-                           <img src="{{asset('public/image_web/').'/'.$setting->logo}}" alt=""></a></figure>
+                           <img src="{{asset('image_web/').$setting->logo}}" alt=""></a></figure>
                      </div>
                      <div class="menu-area">
                         <nav class="main-menu clearfix">
@@ -144,7 +144,7 @@
                         <a href="{{url('userdashboard')}}" class="theme-btn-one">{{__('message.My Dashboard')}}</a>
                         @else
                         <a href="{{url('doctorlogin')}}" class="theme-btn-one">{{__('message.My Dashboard')}}</a>
-                        @endif                                 
+                        @endif
                         @endif
                      </div>
                   </div>
@@ -155,7 +155,7 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
             <nav class="menu-box">
-               <div class="nav-logo"><a href="{{url('/')}}"><img src="{{asset('public/image_web/').'/'.$setting->logo}}" alt="" title=""></a></div>
+               <div class="nav-logo"><a href="{{url('/')}}"><img src="{{asset('image_web/').$setting->logo}}" alt="" title=""></a></div>
                <div class="menu-outer"></div>
                <div class="contact-info">
                   <h4>{{__('message.Contact Info')}}</h4>
@@ -189,7 +189,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                            <div class="footer-widget logo-widget">
                               <figure class="footer-logo"><a href="{{url('/')}}">
-                                 <img src="{{asset('public/image_web/').'/'.$setting->logo}}" alt=""></a></figure>
+                                 <img src="{{asset('image_web/').$setting->logo}}" alt=""></a></figure>
                               <div class="text">
                                  <p>{{__('message.Footer Content')}}</p>
                               </div>
@@ -249,7 +249,7 @@
             </div>
 
 
-            
+
 
 
 
@@ -272,7 +272,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <input type="hidden" id="currentuserlat">
       <input type="hidden" id="currentuserlong">
-      
+
       <input type="hidden" id="contactsuccssmsg" value="{{__('message.Thank you for getting in touch!')}}">
       <input type="hidden" id="successlabel" value="{{__('message.Success')}}">
       <input type="hidden" id="Errorlabel" value="{{__('message.Error')}}">
@@ -303,7 +303,7 @@
       <script src="{{asset('public/front_pro/assets/js/jquery.paroller.min.js')}}"></script>
       <script src="{{asset('public/js/locationpicker.js')}}"></script>
       <script src="{{asset('public/front_pro/assets/js/script.js')}}"></script>
- 
+
       <script src="{{asset('public/front_pro/assets/js/product-filter.js')}}"></script>
       <script src="{{asset('public/front_pro/assets/js/jquery-ui.js')}}"></script>
 
@@ -330,14 +330,14 @@
       <script>
          if (navigator.geolocation) {
              navigator.geolocation.getCurrentPosition(showPosition);
-         } else { 
+         } else {
              x.innerHTML = "Geolocation is not supported by this browser.";
-         }    
+         }
          function showPosition(position) {
              console.log(position);
              $("#currentuserlat").val(position.coords.latitude);
              $("#currentuserlong").val(position.coords.longitude);
-           
+
          }
 
       </script>

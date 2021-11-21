@@ -2,14 +2,14 @@
 
 <head>
     <meta charset="windows-1252">
-    
+
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="" name="online bookappoinment" />
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://freaktemplate.com/appointment_book/"/>
 <meta property="fb:app_id" content="712476946093902"/>
 <meta property="og:title" content="online bookappoinment"/>
-<meta property="og:image" content="https://freaktemplate.com/appointment_book/public/image_web/867087.png"/>
+<meta property="og:image" content="https://freaktemplate.com/appointment_book/image_web/867087.png"/>
 <meta property="og:image:width" content="250px"/>
 <meta property="og:image:height" content="250px"/>
 
@@ -645,7 +645,7 @@ ol
 ul
 	{margin-bottom:0cm;}
 -->
-</style>	
+</style>
 </head>
 <body lang=EN-GB link="#0563C1" vlink="#954F72" style='tab-interval:36.0pt'>
 

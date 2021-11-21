@@ -6,13 +6,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{{__('message.System Name')}}"/>
 <meta property="og:title" content="{{__('message.System Name')}}"/>
-<meta property="og:image" content="{{asset('public/image_web/').'/'.$setting->favicon}}"/>
+<meta property="og:image" content="{{asset('/mage_web/'.$setting->favicon)}}"/>
 <meta property="og:image:width" content="250px"/>
 <meta property="og:image:height" content="250px"/>
 <meta property="og:site_name" content="{{__('message.System Name')}}"/>
 <meta property="og:description" content="{{__('message.meta_description')}}"/>
 <meta property="og:keyword" content="{{__('message.Meta Keyword')}}"/>
-<link rel="shortcut icon" href="{{asset('public/image_web/').'/'.$setting->favicon}}">
+<link rel="shortcut icon" href="{{asset('/image_web/'.$setting->favicon)}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @stop
 @section('content')
@@ -41,9 +41,9 @@
          <div class="upper-box">
             <figure class="profile-image">
                @if(isset($userdata)&&$userdata->profile_pic!="")
-               <img src="{{asset('public/upload/profile').'/'.$userdata->profile_pic}}" alt="">
+               <img src="{{asset('upload/profile/'.$userdata->profile_pic)}}" alt="">
                @else
-               <img src="{{asset('public/upload/profile/profile.png')}}" alt="">
+               <img src="{{asset('upload/profile/profile.png')}}" alt="">
                @endif
             </figure>
             <div class="title-box centred">
@@ -145,7 +145,7 @@
                               <th>{{__('message.Phone')}}</th>
                               <th>{{__('message.Date')}}</th>
                               <th>{{__('message.Status')}}</th>
-                              
+
                            </tr>
                         </thead>
                         <tbody>
@@ -172,7 +172,7 @@
                                  <span class="time">{{$bdata->slot_name}}</span>
                               </td>
                               <td>
-                                 <?php 
+                                 <?php
                                     if($bdata->status=='1'){
                                          echo '<span class="status">'.__("message.Received").'</span>';
                                     }else if($bdata->status=='2'){
@@ -187,10 +187,10 @@
                                          echo '<span class="status">'. __("message.Rejected").'</span>';
                                     }else{
                                          echo '<span class="status">'. __("message.Absent").'</span>';
-                                    }   
+                                    }
                                     ?>
                               </td>
-                             
+
                            </tr>
                            @endforeach
                         </tbody>

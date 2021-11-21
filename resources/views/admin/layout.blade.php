@@ -31,6 +31,9 @@
       <link href="{{asset('admin_design/layouts/vertical/assets/libs/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" />
       <script type="text/javascript" src='https://maps.google.com/maps/api/js?key={{Config::get("mapdetail.key")}}&sensor=false&libraries=places'></script>
+{{--      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />--}}
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
    </head>
    <body>
       <div id="layout-wrapper">
@@ -173,6 +176,12 @@
                         <a href="{{url('admin/plans')}}" class="waves-effect">
                         <i class="uil-credit-card"></i>
                         <span>{{__("message.Plans")}}</span>
+                        </a>
+                     </li>
+                      <li>
+                        <a href="{{url('admin/clinics')}}" class="waves-effect">
+                        <i class="uil-hospital"></i>
+                        <span>{{__("message.Clinics")}}</span>
                         </a>
                      </li>
                       <li>

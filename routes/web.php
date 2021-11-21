@@ -14,6 +14,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TypeServiceController;
+use App\Http\Controllers\ClinicController;
 use App\Http\Controllers\FullCalendarEventMasterController;
 
 /*
@@ -26,7 +27,7 @@ use App\Http\Controllers\FullCalendarEventMasterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+
 
 Route::group(['prefix' => '/'], function () {
 
@@ -39,7 +40,7 @@ Route::group(['prefix' => '/'], function () {
 Route::get("/", [AuthenticationController::class, "showlogin"]);
 
 Route::group(['prefix' => 'admin'], function () {
-
+    Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 
     Route::post("postlogin", [AuthenticationController::class, "postlogin"]);
 
@@ -113,6 +114,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get("savetypeservice/{id}", [TypeServiceController::class, "savetypeservice"]);
         Route::post("updatetypeservice", [TypeServiceController::class, "updatetypeservice"]);
         Route::get("deletetypeservice/{id}", [TypeServiceController::class, "deletetypeservice"]);
+
+        Route::get("clinics", [ClinicController::class, "showclinics"]);
+        Route::get("clinicstable", [ClinicController::class, "clinicstable"]);
+        Route::get("saveclinic/{id}", [ClinicController::class, "saveclinic"]);
+        Route::post("updateclinic", [ClinicController::class, "updateclinic"]);
+        Route::get("deleteclinic/{id}", [ClinicController::class, "deleteclinic"]);
+        Route::get("viewlicense/{filename}", [ClinicController::class, "viewlicense"]);
     });
 
 });

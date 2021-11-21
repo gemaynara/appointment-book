@@ -25,8 +25,8 @@ class AuthenticationController extends Controller
     public function showlogin(){
        $setting=Setting::find(1);
        Session::put("is_demo",$setting->is_demo);
-       Session::put("favicon",asset('public/image_web').'/'.$setting->favicon);
-       Session::put("logo",asset('public/image_web').'/'.$setting->logo);
+       Session::put("favicon",asset('image_web/'.$setting->favicon));
+       Session::put("logo",asset('image_web/'.$setting->logo));
        return view("admin.login");
     }
 
@@ -61,10 +61,10 @@ class AuthenticationController extends Controller
      }
 
     public function showdashboard(){
-      $totaldoctor=count(Doctors::all());
-      $totalappointment=count(BookAppointment::all());
-      $totalreview=count(Review::all());
-      $totalpatient=count(Patient::all());
+      $totaldoctor=Doctors::all()->count();
+      $totalappointment=BookAppointment::all()->count();
+      $totalreview=Review::all()->count();
+      $totalpatient=Patient::all()->count();
     	return view("admin.dashboard")->with("totaldoctor",$totaldoctor)->with("totalappointment",$totalappointment)->with("totalreview",$totalreview)->with("totalpatient",$totalpatient);
     }
 
@@ -271,7 +271,7 @@ class AuthenticationController extends Controller
          $store->flat_fee=$request->get("flat_fee");
          $store->percent_fee=$request->get("percent_fee");
          $store->save();
-         Session::flash('message',"Setting Update Successfully");
+         Session::flash('message',"Configuração alterada com sucesso");
          Session::flash('alert-class', 'alert-success');
          return redirect()->back();
      }
@@ -442,7 +442,7 @@ class AuthenticationController extends Controller
                         }
             }
          $store->save();
-         Session::flash('message',"Setting Update Successfully");
+         Session::flash('message',"Configuração alterada com sucesso");
          Session::flash('alert-class', 'alert-success');
          return redirect()->back();
      }

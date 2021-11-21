@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('title')
-{{__("message.Edit Profile")}} | {{__("message.admin")}}  
+{{__("message.Edit Profile")}} | {{__("message.admin")}}
 @stop
 @section('meta-data')
 @stop
@@ -34,7 +34,7 @@
                      </div>
                      @endif
                      <form action="{{url('admin/updateaccount')}}" method="post" enctype="multipart/form-data">
-                        {{csrf_field()}}  
+                        {{csrf_field()}}
                         <div class="form-group">
                            <label for="formrow-firstname-input">{{__("message.First Name")}}</label>
                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder='{{__("message.Enter Your First Name")}}' value="{{$userdata->first_name}}" required>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="form-group">
                            <label for="formrow-firstname-input">{{__("message.Image")}}</label>
-                           <img src="{{asset('public/upload/profile/').'/'.$userdata->profile_pic}}" style="width: 150px;height: 150px" />
+                           <img src="{{asset('upload/profile/'.$userdata->profile_pic)}}" style="width: 150px;height: 150px" />
                            <input type="file" class="form-control" id="profile_pic" name="profile_pic" >
                         </div>
                         <div class="mt-4">
@@ -61,7 +61,7 @@
                               <button type="button" onclick="disablebtn()" class="btn btn-primary">{{__('message.Submit')}}</button>
                            @else
                                <button  class="btn btn-primary" type="submit" value="Submit">{{__("message.Submit")}}</button>
-                           @endif 
+                           @endif
                         </div>
                      </form>
                   </div>

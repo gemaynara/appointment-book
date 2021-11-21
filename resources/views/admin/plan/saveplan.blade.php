@@ -35,10 +35,10 @@
                                     <div class="form-group">
                                         <label for="formrow-firstname-input">{{__("message.Image")}}</label>
                                         @if($data)
-                                            <img src="{{asset('public/upload/plans').'/'.$data->image}}" style="width: 150px;height: 150px" />
+                                            <img src="{{asset('upload/plans/'. $data->image)}}" style="width: 150px;height: 150px" />
                                             <input type="file" class="form-control" id="image" name="image" >
                                         @else
-                                            <input type="file" class="form-control" required="" id="image" name="image" >
+                                            <input type="file" class="form-control" required="" id="image" name="image" accept="image/*" >
                                         @endif
                                     </div>
                                     <div class="mt-4">

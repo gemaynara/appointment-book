@@ -6,13 +6,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{{__('message.System Name')}}"/>
 <meta property="og:title" content="{{__('message.System Name')}}"/>
-<meta property="og:image" content="{{asset('public/image_web/').'/'.$setting->favicon}}"/>
+<meta property="og:image" content="{{asset('image_web/').'/'.$setting->favicon}}"/>
 <meta property="og:image:width" content="250px"/>
 <meta property="og:image:height" content="250px"/>
 <meta property="og:site_name" content="{{__('message.System Name')}}"/>
 <meta property="og:description" content="{{__('message.meta_description')}}"/>
 <meta property="og:keyword" content="{{__('message.Meta Keyword')}}"/>
-<link rel="shortcut icon" href="{{asset('public/image_web/').'/'.$setting->favicon}}">
+<link rel="shortcut icon" href="{{asset('image_web').'/'.$setting->favicon}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @stop
 @section('content')
@@ -50,7 +50,7 @@
                                     <li>Associates Insurance</li>
                                     <li>Pina & Insurance</li>
                                 </ul>
-                              
+
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-       
+
      <section class="process-style-two bg-color-3 centred">
    <div class="pattern-layer">
       <div class="pattern-1" style="background-image: url('{{asset('public/front_pro/assets/images/shape/shape-39.png')}}');"></div>
@@ -94,7 +94,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
                <div class="processing-block-two">
                   <div class="inner-box">
-                     <figure class="icon-box"><img src="{{asset('public/image_web/').'/'.$setting->icon1}}" alt=""></figure>
+                     <figure class="icon-box"><img src="{{asset('public/image_web').'/'.$setting->icon1}}" alt=""></figure>
                      <h3>{{__('message.Search Best Online Doctors')}}</h3>
                   </div>
                </div>
@@ -102,7 +102,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
                <div class="processing-block-two">
                   <div class="inner-box">
-                     <figure class="icon-box"><img src="{{asset('public/image_web/').'/'.$setting->icon2}}" alt=""></figure>
+                     <figure class="icon-box"><img src="{{asset('image_web/').$setting->icon2}}" alt=""></figure>
                      <h3>{{__('message.View Doctor Profile')}}</h3>
                   </div>
                </div>
@@ -110,7 +110,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
                <div class="processing-block-two">
                   <div class="inner-box">
-                     <figure class="icon-box"><img src="{{asset('public/image_web/').'/'.$setting->icon3}}" alt=""></figure>
+                     <figure class="icon-box"><img src="{{asset('/image_web/').$setting->icon3}}" alt=""></figure>
                      <h3>{{__('message.Get Instant Doctor Appoinment')}}</h3>
                   </div>
                </div>
@@ -119,7 +119,7 @@
       </div>
    </div>
 </section>
-      
+
         <section class="faq-section pt-125">
             <div class="auto-container">
                 <div class="row clearfix">
@@ -179,7 +179,7 @@
                 </div>
             </div>
         </section>
-        
+
        <section class="agent-section" style="background: aliceblue;">
             <div class="auto-container">
                 <div class="inner-container bg-color-2">

@@ -6,13 +6,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{{__('message.System Name')}}"/>
 <meta property="og:title" content="{{__('message.System Name')}}"/>
-<meta property="og:image" content="{{asset('public/image_web/').'/'.$setting->favicon}}"/>
+<meta property="og:image" content="{{asset('image_web').'/'.$setting->favicon}}"/>
 <meta property="og:image:width" content="250px"/>
 <meta property="og:image:height" content="250px"/>
 <meta property="og:site_name" content="{{__('message.System Name')}}"/>
 <meta property="og:description" content="{{__('message.meta_description')}}"/>
 <meta property="og:keyword" content="{{__('message.Meta Keyword')}}"/>
-<link rel="shortcut icon" href="{{asset('public/image_web/').'/'.$setting->favicon}}">
+<link rel="shortcut icon" href="{{asset('image_web').'/'.$setting->favicon}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @stop
 @section('content')
@@ -47,7 +47,7 @@
                     <div class="content-box">
                         <div class="title-box">
                             <h3>{{__('message.Reset Password')}}</h3>
-                           
+
                         </div>
                         <div class="inner">
                              @if(Session::has('message'))
@@ -66,7 +66,7 @@
                                  <input type="hidden" name="id" value="{{$id}}" />
                                  <input type="hidden" name="type" value="{{$type}}" />
                                 <div class="row clearfix">
-                                    
+
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                         <label>{{__("message.Enter New Password")}}</label>
                                         <input type="password"  name="npwd" id="npwd" placeholder="{{__('message.Enter New Password')}}" required="">
@@ -75,7 +75,7 @@
                                         <label>{{__("message.Enter Re Enter New Password")}}</label>
                                         <input type="password"  name="rpwd" id="rpwd" placeholder="{{__('message.Enter Re Enter New Password')}}" required="">
                                     </div>
-                                   
+
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                         <button type="submit" class="theme-btn-one">{{__('message.Reset Password')}}<i class="icon-Arrow-Right"></i></button>
                                     </div>
@@ -83,9 +83,9 @@
                             </form>
                              @else
                               <h3>{{$msg}}</h3>
-                               
+
                               @endif
-                           
+
                         </div>
                     </div>
                 </div>
